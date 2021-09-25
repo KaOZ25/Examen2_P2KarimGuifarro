@@ -12,6 +12,7 @@ import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -78,10 +79,10 @@ public class inicio extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         ed = new javax.swing.JSpinner();
-        can = new javax.swing.JSpinner();
         id = new javax.swing.JTextField();
         nom = new javax.swing.JTextField();
         gen = new javax.swing.JTextField();
+        can = new javax.swing.JTextField();
         Cin = new javax.swing.JDialog();
         jPanel4 = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
@@ -92,11 +93,12 @@ public class inicio extends javax.swing.JFrame {
         In_t = new javax.swing.JComboBox<>();
         In_c = new javax.swing.JSpinner();
         jButton7 = new javax.swing.JButton();
+        Vehi = new javax.swing.JDialog();
         tab = new javax.swing.JTabbedPane();
         jPanel5 = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        vin = new javax.swing.JTextField();
+        VIN = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel34 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
@@ -112,7 +114,7 @@ public class inicio extends javax.swing.JFrame {
         as = new javax.swing.JComboBox<>();
         jPanel6 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabl2 = new javax.swing.JTable();
         jPanel7 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -430,6 +432,8 @@ public class inicio extends javax.swing.JFrame {
 
         jLabel14.setText("Cantidad de Vehiculos:");
 
+        can.setText("0");
+
         javax.swing.GroupLayout ensamLayout = new javax.swing.GroupLayout(ensam.getContentPane());
         ensam.getContentPane().setLayout(ensamLayout);
         ensamLayout.setHorizontalGroup(
@@ -464,8 +468,8 @@ public class inicio extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(ensamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(can, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(80, 80, 80))
+                    .addComponent(can, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(73, 73, 73))
         );
         ensamLayout.setVerticalGroup(
             ensamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -582,7 +586,8 @@ public class inicio extends javax.swing.JFrame {
                 .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        Vehi.setMinimumSize(new java.awt.Dimension(700, 550));
+        Vehi.setResizable(false);
 
         tab.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -621,46 +626,44 @@ public class inicio extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGap(75, 75, 75)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(col, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGap(48, 48, 48)
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel35))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(bat, 0, 131, Short.MAX_VALUE)
-                                    .addComponent(car, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel37, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.TRAILING))))
+                        .addGap(75, 75, 75)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(ine, 0, 94, Short.MAX_VALUE)
-                            .addComponent(inf, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(as, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(col, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel35))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(bat, 0, 131, Short.MAX_VALUE)
+                            .addComponent(car, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGap(180, 180, 180)
-                                .addComponent(jLabel33))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGap(193, 193, 193)
-                                .addComponent(jLabel1)
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(vin, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton1))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(37, 37, 37))
+                            .addComponent(jLabel37, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(as, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ine, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(inf, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(59, 59, 59))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(180, 180, 180)
+                        .addComponent(jLabel33))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(193, 193, 193)
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(VIN, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton1))))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -669,7 +672,7 @@ public class inicio extends javax.swing.JFrame {
                 .addComponent(jLabel33)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(vin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(VIN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(21, 21, 21)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -696,7 +699,7 @@ public class inicio extends javax.swing.JFrame {
 
         tab.addTab("Crear", jPanel5);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabl2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -705,7 +708,7 @@ public class inicio extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
                 false, false, false, false, false, false, false
@@ -719,7 +722,7 @@ public class inicio extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tabl2);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -727,8 +730,8 @@ public class inicio extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 591, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 555, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(53, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -743,7 +746,7 @@ public class inicio extends javax.swing.JFrame {
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 603, Short.MAX_VALUE)
+            .addGap(0, 614, Short.MAX_VALUE)
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -751,6 +754,22 @@ public class inicio extends javax.swing.JFrame {
         );
 
         tab.addTab("Editar", jPanel7);
+
+        javax.swing.GroupLayout VehiLayout = new javax.swing.GroupLayout(Vehi.getContentPane());
+        Vehi.getContentPane().setLayout(VehiLayout);
+        VehiLayout.setHorizontalGroup(
+            VehiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, VehiLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tab)
+                .addContainerGap())
+        );
+        VehiLayout.setVerticalGroup(
+            VehiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(tab)
+        );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jMenu1.setText("Crear Partes");
 
@@ -839,14 +858,11 @@ public class inicio extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(tab)
-                .addContainerGap())
+            .addGap(0, 620, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tab)
+            .addGap(0, 496, Short.MAX_VALUE)
         );
 
         pack();
@@ -860,7 +876,9 @@ public class inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-
+        Vehi.setVisible(true);
+        Vehi.setResizable(false);
+        Vehi.setLocationRelativeTo(this);
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuItem9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem9MouseClicked
@@ -869,33 +887,42 @@ public class inicio extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         Random r = new Random();
         administrar bw = new administrar("./vehiculos.txt");
-        String VIN;
+        String ViN;
         String color;
         Bateria bateria;
         Carroceria carroceria;
         Interior interior;
         Infoentretenimiento infoentretenimiento;
         Asientos asientos;
+        int l = 0;
         String v = "", m = "";
-        for (int i = 0; i < 5; i++) {
-            int n = 0 + r.nextInt(9);
-            v += String.valueOf(n);
+        String[] o;
+        ViN = VIN.getText();
+        adminvin vi = new adminvin("./VIN.txt");
+        vi.cargarArchivo();
+        for (Vin t : vi.getVin()) {
+            o = vi.getVin().toString().split("\\s");
+            v = o[1];
+            if (v.contains(ViN)) {
+                JOptionPane.showMessageDialog(null, "este VIN ya existe");
+                ViN = +l + "AOS";
+                l++;
+            }
         }
-        VIN = v;
-        vin.setText(v);
         color = col.getText();
         bateria = (Bateria) bat.getSelectedItem();
         carroceria = (Carroceria) car.getSelectedItem();
-        interior =(Interior) ine.getSelectedItem();
+        interior = (Interior) ine.getSelectedItem();
         infoentretenimiento = (Infoentretenimiento) inf.getSelectedItem();
         asientos = (Asientos) as.getSelectedItem();
-        vehiculo c = new vehiculo(VIN, color, bateria, carroceria, infoentretenimiento, asientos,interior);
+        vehiculo c = new vehiculo(ViN, color, bateria, carroceria, infoentretenimiento, asientos, interior);
         bw.getVehiculo().add(c);
         try {
             bw.escribirArchivo();
         } catch (IOException ex) {
             Logger.getLogger(inicio.class.getName()).log(Level.SEVERE, null, ex);
         }
+        VIN.setText("");
         col.setText(null);
         bat.setSelectedIndex(0);
         car.setSelectedIndex(0);
@@ -912,7 +939,7 @@ public class inicio extends javax.swing.JFrame {
         nombre = nom.getText();
         genero = gen.getText();
         edad = Integer.toString(ed.getComponentCount());
-        cant_vehiculos = can.getComponentCount();
+        cant_vehiculos = Integer.parseInt(can.getText());
         Ensamblador e = new Ensamblador(ID, nombre, genero, edad, cant_vehiculos);
         bw.getEnsamblador().add(e);
         try {
@@ -957,6 +984,7 @@ public class inicio extends javax.swing.JFrame {
         ensam.setResizable(false);
         ensam.setBounds(500, 500, 500, 500);
         ensam.setLocationRelativeTo(this);
+        can.setEditable(false);
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void C_tActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C_tActionPerformed
@@ -1051,7 +1079,7 @@ public class inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void tabStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_tabStateChanged
-        if (tab.getSelectedIndex()==0) {
+        if (tab.getSelectedIndex() == 0) {
             //Bateria
             Bateria b = (Bateria) bat.getSelectedItem();
             adminBat dp
@@ -1059,56 +1087,92 @@ public class inicio extends javax.swing.JFrame {
             dp.cargarArchivo();
             DefaultListModel modelo
                     = new DefaultListModel();
-             DefaultComboBoxModel l
+            DefaultComboBoxModel l
                     = new DefaultComboBoxModel(dp.getbat().toArray());
-             bat.setModel(l);
-             //Carroceria
-              Carroceria ca = (Carroceria) car.getSelectedItem();
+            bat.setModel(l);
+            //Carroceria
+            Carroceria ca = (Carroceria) car.getSelectedItem();
             admiCarr dp1
                     = new admiCarr("./Carroceria.txt");
             dp1.cargarArchivo();
             DefaultListModel modelo1
                     = new DefaultListModel();
-             DefaultComboBoxModel l1
+            DefaultComboBoxModel l1
                     = new DefaultComboBoxModel(dp1.getCarr().toArray());
-             car.setModel(l1);
-             //Interiores
-              Interior i = (Interior) ine.getSelectedItem();
+            car.setModel(l1);
+            //Interiores
+            Interior i = (Interior) ine.getSelectedItem();
             AdminI dp2
                     = new AdminI("./Interiores.txt");
             dp2.cargarArchivo();
             DefaultListModel modelo2
                     = new DefaultListModel();
-             DefaultComboBoxModel l2
+            DefaultComboBoxModel l2
                     = new DefaultComboBoxModel(dp2.getIn().toArray());
-             ine.setModel(l2);
-             //Asientos
-              Asientos a = (Asientos) as.getSelectedItem();
+            ine.setModel(l2);
+            //Asientos
+            Asientos a = (Asientos) as.getSelectedItem();
             adminAs dp3
                     = new adminAs("./Asientos.txt");
             dp3.cargarArchivo();
             DefaultListModel modelo3
                     = new DefaultListModel();
-             DefaultComboBoxModel l3
+            DefaultComboBoxModel l3
                     = new DefaultComboBoxModel(dp3.getAs().toArray());
-             as.setModel(l3);
-             //Infoentretenimiento
-              Infoentretenimiento I = (Infoentretenimiento) inf.getSelectedItem();
+            as.setModel(l3);
+            //Infoentretenimiento
+            Infoentretenimiento I = (Infoentretenimiento) inf.getSelectedItem();
             AdminIn dp4
                     = new AdminIn("./Infoentretenimiento.txt");
             dp4.cargarArchivo();
             DefaultListModel modelo4
                     = new DefaultListModel();
-             DefaultComboBoxModel l4
+            DefaultComboBoxModel l4
                     = new DefaultComboBoxModel(dp4.getInfo().toArray());
-             inf.setModel(l4);
-        }else if (tab.getSelectedIndex()==1) {
-            
+            inf.setModel(l4);
+        } else if (tab.getSelectedIndex() == 1) {
+            administrar ap = new administrar("./vehiculos.txt");
+            ap.cargarArchivo();
+            tabl2.setModel(new javax.swing.table.DefaultTableModel(
+                    new Object[][]{},
+                    new String[]{
+                        "VIN", "Color", "Bateria", "Carroceria", "Infoentretenimiento", "Asientos", "Interior"
+                    }
+            ) {
+                Class[] types = new Class[]{
+                    java.lang.String.class,
+                    java.lang.String.class,
+                    java.lang.Object.class,
+                    java.lang.Object.class,
+                    java.lang.Object.class,
+                    java.lang.Object.class,
+                    java.lang.Object.class};
+                boolean[] canEdit = new boolean[]{
+                    false, false, false, false, false, false, false
+                };
+
+                @Override
+                public Class getColumnClass(int columnIndex) {
+                    return types[columnIndex];
+                }
+
+                @Override
+                public boolean isCellEditable(int rowIndex, int columnIndex) {
+                    return canEdit[columnIndex];
+                }
+            });
+            for (vehiculo t : ap.getVehiculo()) {
+                Object row[] = {t.getVIN(), t.getColor(), t.getBateria(), t.getCarroceria(), t.getInfoentretenimiento(), t.getAsientos(), t.getInterior()};
+                DefaultTableModel m
+                        = (DefaultTableModel) tabl2.getModel();
+                m.addRow(row);
+                tabl2.setModel(m);
+            }
         }
     }//GEN-LAST:event_tabStateChanged
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-          CI.setVisible(true);
+        CI.setVisible(true);
         CI.setResizable(false);
         CI.setBounds(500, 500, 500, 500);
         CI.setLocationRelativeTo(this);
@@ -1166,11 +1230,13 @@ public class inicio extends javax.swing.JFrame {
     private javax.swing.JSpinner In_c;
     private javax.swing.JTextField In_m;
     private javax.swing.JComboBox<String> In_t;
+    private javax.swing.JTextField VIN;
+    private javax.swing.JDialog Vehi;
     private javax.swing.JComboBox<String> as;
     private javax.swing.JComboBox<String> bat;
     private javax.swing.JComboBox<String> bt_m;
     private javax.swing.JSpinner bt_sp;
-    private javax.swing.JSpinner can;
+    private javax.swing.JTextField can;
     private javax.swing.JComboBox<String> car;
     private javax.swing.JTextField col;
     private javax.swing.JSpinner ed;
@@ -1235,11 +1301,11 @@ public class inicio extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField nom;
     private javax.swing.JTabbedPane tab;
-    private javax.swing.JTextField vin;
+    private javax.swing.JTable tabl2;
     // End of variables declaration//GEN-END:variables
 Ensamblador e = new Ensamblador();
     vehiculo c = new vehiculo();
+    Random r = new Random();
 }

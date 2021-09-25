@@ -1,0 +1,1 @@
+12345;Rojo;material=Niquel, autonomia=14;tipo=SUV, cap_maletero=26;mat_usado=Cuero, tipo_volante=Mecanico, botones=2;cant_pantalla=22, ancho_pantalla=5, visor=Si;material=Cuero, tipo=electrico, masaje=Si;
