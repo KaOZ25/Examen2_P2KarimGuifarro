@@ -38,5 +38,10 @@ public class Carroceria {
         this.cap_maletero = cap_maletero;
     }
 
+    @Override
+    public String toString() {
+        return "tipo=" + tipo + ", cap_maletero=" + cap_maletero + '}';
+    }
+    
   
 }

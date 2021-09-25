@@ -45,6 +45,11 @@ public class Asientos {
     public void setMasaje(String masaje) {
         this.masaje = masaje;
     }
+
+    @Override
+    public String toString() {
+        return "material=" + material + ", tipo=" + tipo + ", masaje=" + masaje + '}';
+    }
     
    
 }

@@ -47,5 +47,11 @@ public class Interior {
     public void setBotones(int botones) {
         this.botones = botones;
     }
+
+    @Override
+    public String toString() {
+        return "mat_usado=" + mat_usado + ", tipo_volante=" + tipo_volante + ", botones=" + botones + '}';
+    }
+    
     
 }

@@ -46,6 +46,11 @@ public class Infoentretenimiento {
         this.visor = visor;
     }
 
+    @Override
+    public String toString() {
+        return "cant_pantalla=" + cant_pantalla + ", ancho_pantalla=" + ancho_pantalla + ", visor=" + visor + '}';
+    }
+
     
     
 }

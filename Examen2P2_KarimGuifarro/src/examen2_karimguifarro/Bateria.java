@@ -33,4 +33,10 @@ public class Bateria {
     public void setAutonomia(int autonomia) {
         this.autonomia = autonomia;
     }  
+
+    @Override
+    public String toString() {
+        return  "material=" + material + ", autonomia=" + autonomia + '}';
+    }
+    
 }
